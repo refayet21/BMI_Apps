@@ -17,22 +17,16 @@ private ImageView maleImage,femaleImage;
         maleImage=findViewById(R.id.maleID);
         femaleImage=findViewById(R.id.femaleID);
 
-        maleImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent maleIntent=new Intent(MainActivity.this,MaleActivity.class);
-                startActivity(maleIntent);
-                Toast.makeText(MainActivity.this,"Male is clicked",Toast.LENGTH_SHORT).show();
-            }
+        maleImage.setOnClickListener(v -> {
+            Intent maleIntent=new Intent(MainActivity.this,MaleActivity.class);
+            startActivity(maleIntent);
+            Toast.makeText(MainActivity.this,"Male is clicked",Toast.LENGTH_SHORT).show();
         });
 
-        femaleImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent femaleIntent=new Intent(MainActivity.this,FemaleActivity.class);
-                startActivity(femaleIntent);
-                Toast.makeText(MainActivity.this,"Female is clicked",Toast.LENGTH_SHORT).show();
-            }
+        femaleImage.setOnClickListener(v -> {
+            Intent femaleIntent=new Intent(MainActivity.this,FemaleActivity.class);
+            startActivity(femaleIntent);
+            Toast.makeText(MainActivity.this,"Female is clicked",Toast.LENGTH_SHORT).show();
         });
 
     }
