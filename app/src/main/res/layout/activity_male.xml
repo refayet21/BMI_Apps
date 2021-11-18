@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaleActivity">
+
+
+    <TextView
+        android:id="@+id/malePageHeaslineID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MALE BMI CALCULATION"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/malePageLogoID"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/male_formal"
+        android:adjustViewBounds="true"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/malePageHeaslineID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintHorizontal_bias=".5"/>
+
+
+    <EditText
+        android:id="@+id/malePageEdt_heightID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Height"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/malePageLogoID"
+
+        />
+
+
+    <EditText
+        android:id="@+id/malePageEdt_weightID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Weight"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/malePageEdt_heightID"
+
+        />
+
+    <Button
+        android:id="@+id/malePageBtn_calculateID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Calculate"
+        android:textAllCaps="false"
+
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/malePageEdt_weightID" />
+
+    <TextView
+        android:id="@+id/malePageTv_scoreID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/malePageBtn_calculateID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
