@@ -8,22 +8,26 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bmi.bmicalculator.databinding.ActivityMainBinding;
+import com.bmi.bmicalculator.databinding.ActivityMaleBinding;
+
 public class MainActivity extends AppCompatActivity {
-private ImageView maleImage,femaleImage;
+ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        maleImage=findViewById(R.id.maleID);
-        femaleImage=findViewById(R.id.femaleID);
+        binding= ActivityMainBinding.inflate(getLayoutInflater());
+        View view=binding.getRoot();
+        setContentView(view);
 
-        maleImage.setOnClickListener(v -> {
+
+       binding.maleID.setOnClickListener(v -> {
             Intent maleIntent=new Intent(MainActivity.this,MaleActivity.class);
             startActivity(maleIntent);
             Toast.makeText(MainActivity.this,"Male is clicked",Toast.LENGTH_SHORT).show();
         });
 
-        femaleImage.setOnClickListener(v -> {
+        binding.femaleID.setOnClickListener(v -> {
             Intent femaleIntent=new Intent(MainActivity.this,FemaleActivity.class);
             startActivity(femaleIntent);
             Toast.makeText(MainActivity.this,"Female is clicked",Toast.LENGTH_SHORT).show();
